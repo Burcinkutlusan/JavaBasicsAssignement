@@ -1,0 +1,66 @@
+1-
+import java.util.Scanner;
+/*BURCİNKUTLUSAN*/
+public class Main {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        System.out.println("Bir sayi giriniz:");
+        int sayi= input.nextInt();
+        int factoriyel =1;
+        int i=1;
+
+        for(i=1;i<=sayi;i++) {
+            factoriyel = factoriyel * i;
+        }
+        System.out.println(sayi+" sayisinin faktoriyeli= "+factoriyel);
+
+    }
+}
+2-
+import java.util.Scanner;
+/*BURCİNKUTLUSAN*/
+public class fibonacciSequence {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        int n1=0,n2=1,n3,i,n;
+        System.out.println("Kac adet fibonacci sayisi gormek istiyorsunuz:");
+        n = input.nextInt();
+        if(n==1){
+            System.out.println("0");
+        }
+        else {
+            System.out.print(n1 + " " + n2);
+            for (i = 2; i < n; ++i) {
+                n3 = n1 + n2;
+                System.out.print(" " + n3);
+                n1 = n2;
+                n2 = n3;
+            }
+        }
+    }
+}
+3-
+public class palindromeCheck {
+    /*burcinkutlusan*/
+    public static void main(String[] args) {
+
+        System.out.println("Polindrom olan elemanlar:");
+        int[] sayilar = {15, 868, 9119, 783};
+        for (int i = 0; i<sayilar.length; i++) {
+            int a=0 ;
+            int palindrom = 0;
+            int kalan = 0;
+            a = sayilar[i];
+            while (a != 0) {
+                kalan = a % 10;
+                palindrom = palindrom * 10 + kalan;
+                a /= 10;
+
+            }
+            if (sayilar[i] == palindrom) {
+                System.out.println(sayilar[i]);
+            }
+
+        }
+    }
+}
