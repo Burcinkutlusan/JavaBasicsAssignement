@@ -1,0 +1,52 @@
+1-
+public class Main {
+    public static void main(String[] args) {
+
+        System.out.println("Hello World!");
+    }
+}
+2-
+/*BURCİNKUTLUSAN*/
+public class simpleCalculator {
+    public static void main(String[] args) {
+        Scanner input= new Scanner(System.in);
+
+        System.out.println("1.sayiyi giriniz:");
+        int sayi1 = input.nextInt();
+        System.out.println("2.sayiyi giriniz:");
+        int sayi2 = input.nextInt() ;
+        System.out.println("Bir islem seçiniz;\n1-)Toplama\n2-)Çıkarma\n3-)Çarpma\n4-)Bölme ");
+        byte islem = input.nextByte();
+
+        switch (islem) {
+            case 1:
+                System.out.println("Toplam : " + (sayi1 + sayi2));
+                break;
+            case 2:
+                System.out.println("Fark : " + (sayi1 - sayi2));
+                break;
+            case 3:
+                System.out.println("Carpim : " + (sayi1 * sayi2));
+                break;
+            case 4:
+                System.out.println("Bolum: " + (sayi1 / sayi2));
+                break;
+        }
+    }
+}
+3-
+import java.util.Scanner;
+
+public class evenOrOdd {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Bir Sayi Giriniz:");
+        int sayi = input.nextInt();
+        if (sayi %2==0) {
+            System.out.println(sayi+" bir cift sayidir");
+        }
+        else{
+            System.out.println(sayi+" bir tek sayidir");
+        }
+        }
+}
